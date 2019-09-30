@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oxiyopal", "Oxiyopal\Oxiyopal.csproj", "{5F03FD3E-D062-42DA-A15C-12199B80818C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oxiyopal.Models", "Oxiyopal.Models\Oxiyopal.Models.csproj", "{CD82599E-07DF-4AB0-B73A-F0EFCFE90621}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oxiyopal.Services", "Oxiyopal.Services\Oxiyopal.Services.csproj", "{2073820F-0021-409B-A8A3-41C5E3F19203}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oxiyopal.DataAccess", "Oxiyopal.DataAccess\Oxiyopal.DataAccess.csproj", "{E6976215-EF5D-4C60-9E05-E41F1234F0EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxiyopal.Auth", "Oxiyopal.Auth\Oxiyopal.Auth.csproj", "{B898E865-2BFB-452A-87CF-8B8CD4F2B1DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F03FD3E-D062-42DA-A15C-12199B80818C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F03FD3E-D062-42DA-A15C-12199B80818C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F03FD3E-D062-42DA-A15C-12199B80818C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F03FD3E-D062-42DA-A15C-12199B80818C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD82599E-07DF-4AB0-B73A-F0EFCFE90621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD82599E-07DF-4AB0-B73A-F0EFCFE90621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD82599E-07DF-4AB0-B73A-F0EFCFE90621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD82599E-07DF-4AB0-B73A-F0EFCFE90621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2073820F-0021-409B-A8A3-41C5E3F19203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2073820F-0021-409B-A8A3-41C5E3F19203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2073820F-0021-409B-A8A3-41C5E3F19203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2073820F-0021-409B-A8A3-41C5E3F19203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6976215-EF5D-4C60-9E05-E41F1234F0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6976215-EF5D-4C60-9E05-E41F1234F0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6976215-EF5D-4C60-9E05-E41F1234F0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6976215-EF5D-4C60-9E05-E41F1234F0EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B898E865-2BFB-452A-87CF-8B8CD4F2B1DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B898E865-2BFB-452A-87CF-8B8CD4F2B1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B898E865-2BFB-452A-87CF-8B8CD4F2B1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B898E865-2BFB-452A-87CF-8B8CD4F2B1DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B2310D1-694C-48F0-8AE0-59E119E72F91}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190924144930_CreateDb.cs" />
+    <Compile Remove="Migrations\20190924144930_CreateDb.Designer.cs" />
+    <Compile Remove="Migrations\20190924150446_CreateDb.cs" />
+    <Compile Remove="Migrations\20190924150446_CreateDb.Designer.cs" />
+    <Compile Remove="Migrations\20190924151600_CreateDb.cs" />
+    <Compile Remove="Migrations\20190924151600_CreateDb.Designer.cs" />
+    <Compile Remove="Migrations\20190924154545_CreateDb.cs" />
+    <Compile Remove="Migrations\20190924154545_CreateDb.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="2.2.6" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Oxiyopal.Models\Oxiyopal.Models.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Oxiyopal.DataAccess\Oxiyopal.DataAccess.csproj" />
+    <ProjectReference Include="..\Oxiyopal.Models\Oxiyopal.Models.csproj" />
+  </ItemGroup>
+
+</Project>
