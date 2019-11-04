@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oxiyopal.Services", "Oxiyop
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oxiyopal.DataAccess", "Oxiyopal.DataAccess\Oxiyopal.DataAccess.csproj", "{E6976215-EF5D-4C60-9E05-E41F1234F0EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxiyopal.Auth", "Oxiyopal.Auth\Oxiyopal.Auth.csproj", "{B898E865-2BFB-452A-87CF-8B8CD4F2B1DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oxiyopal.Auth", "Oxiyopal.Auth\Oxiyopal.Auth.csproj", "{B898E865-2BFB-452A-87CF-8B8CD4F2B1DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxiyopal.WebUI", "Oxiyopal.WebUI\Oxiyopal.WebUI.csproj", "{04C9A19E-0816-4275-91C4-C03256ABA502}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B898E865-2BFB-452A-87CF-8B8CD4F2B1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B898E865-2BFB-452A-87CF-8B8CD4F2B1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B898E865-2BFB-452A-87CF-8B8CD4F2B1DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04C9A19E-0816-4275-91C4-C03256ABA502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C9A19E-0816-4275-91C4-C03256ABA502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C9A19E-0816-4275-91C4-C03256ABA502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04C9A19E-0816-4275-91C4-C03256ABA502}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
