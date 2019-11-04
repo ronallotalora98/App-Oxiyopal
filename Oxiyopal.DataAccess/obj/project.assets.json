@@ -3098,11 +3098,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ronall Otalora\\source\\repos\\Oxiyopal\\Oxiyopal.DataAccess\\Oxiyopal.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Ronall Otalora\\source\\repos\\App-Oxiyopal\\Oxiyopal.DataAccess\\Oxiyopal.DataAccess.csproj",
       "projectName": "Oxiyopal.DataAccess",
-      "projectPath": "C:\\Users\\Ronall Otalora\\source\\repos\\Oxiyopal\\Oxiyopal.DataAccess\\Oxiyopal.DataAccess.csproj",
+      "projectPath": "C:\\Users\\Ronall Otalora\\source\\repos\\App-Oxiyopal\\Oxiyopal.DataAccess\\Oxiyopal.DataAccess.csproj",
       "packagesPath": "C:\\Users\\Ronall Otalora\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ronall Otalora\\source\\repos\\Oxiyopal\\Oxiyopal.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\Ronall Otalora\\source\\repos\\App-Oxiyopal\\Oxiyopal.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -3123,8 +3123,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Ronall Otalora\\source\\repos\\Oxiyopal\\Oxiyopal.Models\\Oxiyopal.Models.csproj": {
-              "projectPath": "C:\\Users\\Ronall Otalora\\source\\repos\\Oxiyopal\\Oxiyopal.Models\\Oxiyopal.Models.csproj"
+            "C:\\Users\\Ronall Otalora\\source\\repos\\App-Oxiyopal\\Oxiyopal.Models\\Oxiyopal.Models.csproj": {
+              "projectPath": "C:\\Users\\Ronall Otalora\\source\\repos\\App-Oxiyopal\\Oxiyopal.Models\\Oxiyopal.Models.csproj"
             }
           }
         }
@@ -3162,10 +3162,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

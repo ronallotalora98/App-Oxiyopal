@@ -7,3 +7,11 @@ C:\Users\Ronall Otalora\source\repos\Oxiyopal\Oxiyopal.Models\obj\Debug\netstand
 C:\Users\Ronall Otalora\source\repos\Oxiyopal\Oxiyopal.Models\bin\Debug\netstandard2.0\Oxiyopal.Models.pdb
 C:\Users\Ronall Otalora\source\repos\Oxiyopal\Oxiyopal.Models\obj\Debug\netstandard2.0\Oxiyopal.Models.dll
 C:\Users\Ronall Otalora\source\repos\Oxiyopal\Oxiyopal.Models\obj\Debug\netstandard2.0\Oxiyopal.Models.pdb
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Models\bin\Debug\netstandard2.0\Oxiyopal.Models.deps.json
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Models\bin\Debug\netstandard2.0\Oxiyopal.Models.dll
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Models\bin\Debug\netstandard2.0\Oxiyopal.Models.pdb
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Models\obj\Debug\netstandard2.0\Oxiyopal.Models.csprojAssemblyReference.cache
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Models\obj\Debug\netstandard2.0\Oxiyopal.Models.AssemblyInfoInputs.cache
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Models\obj\Debug\netstandard2.0\Oxiyopal.Models.AssemblyInfo.cs
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Models\obj\Debug\netstandard2.0\Oxiyopal.Models.dll
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Models\obj\Debug\netstandard2.0\Oxiyopal.Models.pdb

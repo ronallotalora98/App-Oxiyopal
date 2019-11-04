@@ -12131,11 +12131,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ronall Otalora\\source\\repos\\Oxiyopal\\Oxiyopal.Auth\\Oxiyopal.Auth.csproj",
+      "projectUniqueName": "C:\\Users\\Ronall Otalora\\source\\repos\\App-Oxiyopal\\Oxiyopal.Auth\\Oxiyopal.Auth.csproj",
       "projectName": "Oxiyopal.Auth",
-      "projectPath": "C:\\Users\\Ronall Otalora\\source\\repos\\Oxiyopal\\Oxiyopal.Auth\\Oxiyopal.Auth.csproj",
+      "projectPath": "C:\\Users\\Ronall Otalora\\source\\repos\\App-Oxiyopal\\Oxiyopal.Auth\\Oxiyopal.Auth.csproj",
       "packagesPath": "C:\\Users\\Ronall Otalora\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ronall Otalora\\source\\repos\\Oxiyopal\\Oxiyopal.Auth\\obj\\",
+      "outputPath": "C:\\Users\\Ronall Otalora\\source\\repos\\App-Oxiyopal\\Oxiyopal.Auth\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -12156,8 +12156,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Ronall Otalora\\source\\repos\\Oxiyopal\\Oxiyopal.Models\\Oxiyopal.Models.csproj": {
-              "projectPath": "C:\\Users\\Ronall Otalora\\source\\repos\\Oxiyopal\\Oxiyopal.Models\\Oxiyopal.Models.csproj"
+            "C:\\Users\\Ronall Otalora\\source\\repos\\App-Oxiyopal\\Oxiyopal.Models\\Oxiyopal.Models.csproj": {
+              "projectPath": "C:\\Users\\Ronall Otalora\\source\\repos\\App-Oxiyopal\\Oxiyopal.Models\\Oxiyopal.Models.csproj"
             }
           }
         }
@@ -12190,10 +12190,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -12,3 +12,16 @@ C:\Users\Ronall Otalora\source\repos\Oxiyopal\Oxiyopal.Services\obj\Debug\netsta
 C:\Users\Ronall Otalora\source\repos\Oxiyopal\Oxiyopal.Services\obj\Debug\netstandard2.0\Oxiyopal.Services.csproj.CopyComplete
 C:\Users\Ronall Otalora\source\repos\Oxiyopal\Oxiyopal.Services\obj\Debug\netstandard2.0\Oxiyopal.Services.dll
 C:\Users\Ronall Otalora\source\repos\Oxiyopal\Oxiyopal.Services\obj\Debug\netstandard2.0\Oxiyopal.Services.pdb
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\bin\Debug\netstandard2.0\Oxiyopal.Services.deps.json
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\bin\Debug\netstandard2.0\Oxiyopal.Services.dll
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\bin\Debug\netstandard2.0\Oxiyopal.Services.pdb
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\bin\Debug\netstandard2.0\Oxiyopal.DataAccess.dll
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\bin\Debug\netstandard2.0\Oxiyopal.Models.dll
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\bin\Debug\netstandard2.0\Oxiyopal.DataAccess.pdb
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\bin\Debug\netstandard2.0\Oxiyopal.Models.pdb
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\obj\Debug\netstandard2.0\Oxiyopal.Services.csprojAssemblyReference.cache
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\obj\Debug\netstandard2.0\Oxiyopal.Services.AssemblyInfoInputs.cache
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\obj\Debug\netstandard2.0\Oxiyopal.Services.AssemblyInfo.cs
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\obj\Debug\netstandard2.0\Oxiyopal.Services.csproj.CopyComplete
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\obj\Debug\netstandard2.0\Oxiyopal.Services.dll
+C:\Users\Ronall Otalora\source\repos\App-Oxiyopal\Oxiyopal.Services\obj\Debug\netstandard2.0\Oxiyopal.Services.pdb
