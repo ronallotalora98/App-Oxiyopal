@@ -19,12 +19,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     {
         title: 'Agregar Cilindro',
         icon: 'plus-square-outline',
-        link: '/dashboard',
+        link: '/new-cilindro',
     },
     {
         title: 'Control Cilindro',
         icon: 'list-outline',
-        link: '/dashboard',
+        link: '/oxi/cilindros',
     },
     {
         title: 'Cartera',
