@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { OxiyopalLayaudComponent } from './oxiyopal-layaud.component';
 import { ControlCilindroComponent } from './control-cilindro/control-cilindro.component';
 import { AddCilindroComponent } from './cilindros/add-cilindro/add-cilindro.component';
+import { ListCilindrosComponent } from './cilindros/list-cilindros/list-cilindros.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
       { path: 'oxi', redirectTo: '/dashboard' },
       { path: 'cilindros', component: ControlCilindroComponent },
       { path: 'new-cilindro', component: AddCilindroComponent },
+      { path: 'list-cilindros/:type', component: ListCilindrosComponent },
     ],
   },
 

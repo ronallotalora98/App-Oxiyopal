@@ -5,6 +5,7 @@ import { Bodega } from './Bodega';
 
 export interface Ubicacion extends EntityBase<number> {
     estaEnBodega: boolean;
+    fechaDeTraslado: Date | string;
 
     clienteId: number;
     cliente: Cliente;

@@ -19,7 +19,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     {
         title: 'Agregar Cilindro',
         icon: 'plus-square-outline',
-        link: '/new-cilindro',
+        link: '/oxi/new-cilindro',
     },
     {
         title: 'Control Cilindro',

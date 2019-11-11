@@ -9,6 +9,7 @@ namespace Oxiyopal.Models
     public class Ubicacion : EntityBase<int>
     {
         public bool estaEnBodega { get; set; }
+        public DateTime FechaDeTraslado { get; set; }
 
 
         public int? ClienteId { get; set; }

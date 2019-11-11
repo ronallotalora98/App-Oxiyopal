@@ -13,6 +13,10 @@ namespace Oxiyopal.Services.IServices
 
         Task UpdateClindro(Cilindro cilindro);
 
-        Task UpdateUbicacion(Cilindro cilindro, Ubicacion ubicacion);
+        Task UpdateUbicacion(Cilindro cilindro, bool estaEnBodega, int tipoDeUbicacionId);
+
+
+        Task<IList<TipoDeProducto>> GetTipoDeProductos();
+        Task<IList<Estado>> GetEstados();
     }
 }

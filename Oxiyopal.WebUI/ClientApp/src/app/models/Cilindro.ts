@@ -4,10 +4,9 @@ import { TipoDeProducto } from './TipoDeProducto';
 import { Estado } from './Estado';
 import { HistorialDeFactura } from './ViewModels/HistorialDeFactura';
 
-export interface Cilindro extends EntityBase<number> {
+export class Cilindro extends EntityBase<number> {
     serial: string;
-    tamaño: number;
-    fechaDeTraslado: Date | string;
+    tamano: number;
 
     tipoDeProductoId: number;
     tipoDeProducto: TipoDeProducto;
@@ -17,5 +16,6 @@ export interface Cilindro extends EntityBase<number> {
 
     historialCilindros: HistorialCilindro;
     historialDeFacturas: HistorialDeFactura[];
+
 }
 

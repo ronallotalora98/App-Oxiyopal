@@ -13,6 +13,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Oxiyopal.DataAccess;
+using Oxiyopal.DataAccess.Repository;
+using Oxiyopal.Services.IServices;
+using Oxiyopal.Services.Services;
 
 namespace Oxiyopal
 {
@@ -50,7 +53,11 @@ namespace Oxiyopal
             services.AddDbContext<OxiyopalDbContext>(options =>
               options.UseSqlServer(Configuration.GetConnectionString("OxiyopalDbContext")));
 
+            services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
+            services.AddTransient<ICilindroService, CilindroService>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

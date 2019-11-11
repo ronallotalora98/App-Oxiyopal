@@ -6,16 +6,22 @@ import { OxiyopalRoutingModule } from './oxiyopal-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OxiyopalLayaudComponent } from './oxiyopal-layaud.component';
 import { ThemeModule } from '../../@theme/theme.module';
-import { NbMenuModule, NbCardModule, NbIconModule, NbButtonModule } from '@nebular/theme';
+import { NbMenuModule, NbCardModule, NbIconModule, NbButtonModule,
+   NbInputModule, NbCheckboxModule, NbRadioModule, NbSelectModule, NbToastrModule } from '@nebular/theme';
 import { ControlCilindroComponent } from './control-cilindro/control-cilindro.component';
 import { AddCilindroComponent } from './cilindros/add-cilindro/add-cilindro.component';
+import { CilindroService } from '../../services/cilindro.service';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { ListCilindrosComponent } from './cilindros/list-cilindros/list-cilindros.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     OxiyopalLayaudComponent,
     ControlCilindroComponent,
-    AddCilindroComponent],
+    AddCilindroComponent,
+    ListCilindrosComponent],
   imports: [
     ThemeModule,
     NbMenuModule,
@@ -25,6 +31,14 @@ import { AddCilindroComponent } from './cilindros/add-cilindro/add-cilindro.comp
     NbCardModule,
     NbIconModule,
     NbButtonModule,
+    NbInputModule,
+    NbCheckboxModule,
+    NbRadioModule,
+    NbSelectModule,
+    FormsModule,
+    NbToastrModule,
+    RouterModule,
   ],
+  providers: [CilindroService],
 })
 export class OxiyopalModule { }

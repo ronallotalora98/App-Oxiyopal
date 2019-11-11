@@ -1,0 +1,8 @@
+<nb-card>
+  <nb-card-header *ngIf="typeCilinder">Listado de  {{typeCilinder}}</nb-card-header>
+  <nb-card-body>
+    <input #search class="search mb-4" nbInput type="text" placeholder="Filtrar..." (keydown)="onSearch(search.value)" (keyup)= "onSearch(search.value)">
+    <ng2-smart-table [settings]="settings" [source]="source" (custom)="onCustomAction($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

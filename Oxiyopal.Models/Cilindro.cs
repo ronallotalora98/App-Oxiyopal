@@ -11,7 +11,6 @@ namespace Oxiyopal.Models
     {
         public string Serial { get; set; }
         public decimal Tamaño { get; set; }
-        public DateTime FechaDeTraslado { get; set; }
 
         public int TipoDeProductoId { get; set; }
         public TipoDeProducto TipoDeProducto { get; set; }

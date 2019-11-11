@@ -12,5 +12,6 @@ namespace Oxiyopal.Services.IServices
         Task<IList<Cliente>> GetClientes();
 
         Task<Cliente> GetClienteSeleted(int clienteId);
+
     }
 }

@@ -40,6 +40,35 @@ namespace Oxiyopal.DataAccess.Migrations
                     b.HasIndex("CiudadId");
 
                     b.ToTable("Bodega");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CiudadId = 1,
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(1804),
+                            Direccion = "",
+                            NombreBodega = "Bodega LLenas",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(1805)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CiudadId = 1,
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(2865),
+                            Direccion = "",
+                            NombreBodega = "Bodega Vacias",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(2866)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CiudadId = 2,
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(2876),
+                            Direccion = "",
+                            NombreBodega = "Planta de LLenado",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(2877)
+                        });
                 });
 
             modelBuilder.Entity("Oxiyopal.Models.Cilindro", b =>
@@ -51,8 +80,6 @@ namespace Oxiyopal.DataAccess.Migrations
                     b.Property<DateTime>("CreatedOn");
 
                     b.Property<int>("EstadoId");
-
-                    b.Property<DateTime>("FechaDeTraslado");
 
                     b.Property<string>("Serial");
 
@@ -90,6 +117,24 @@ namespace Oxiyopal.DataAccess.Migrations
                     b.HasIndex("DepartamentoId");
 
                     b.ToTable("Ciudad");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(263),
+                            DepartamentoId = 1,
+                            NombreCiudad = "Yopal",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(266)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(1064),
+                            DepartamentoId = 2,
+                            NombreCiudad = "Bogota",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(1065)
+                        });
                 });
 
             modelBuilder.Entity("Oxiyopal.Models.Cliente", b =>
@@ -140,6 +185,22 @@ namespace Oxiyopal.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Departamento");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 337, DateTimeKind.Local).AddTicks(522),
+                            NombreDepartamento = "Casanare",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 337, DateTimeKind.Local).AddTicks(6128)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 337, DateTimeKind.Local).AddTicks(7608),
+                            NombreDepartamento = "Cundinamarca",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 337, DateTimeKind.Local).AddTicks(7612)
+                        });
                 });
 
             modelBuilder.Entity("Oxiyopal.Models.Estado", b =>
@@ -159,6 +220,40 @@ namespace Oxiyopal.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Estado");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ColorDeEstado = "#00FF00",
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4802),
+                            NombreDeEstado = "Lleno",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4803)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ColorDeEstado = "#FF3300",
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(5476),
+                            NombreDeEstado = "Vacio",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(5478)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ColorDeEstado = "#FFFF00",
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(5483),
+                            NombreDeEstado = "En mantenimiento",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(5484)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ColorDeEstado = "#17202A",
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(5485),
+                            NombreDeEstado = "Dañado",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(5485)
+                        });
                 });
 
             modelBuilder.Entity("Oxiyopal.Models.Factura", b =>
@@ -203,6 +298,56 @@ namespace Oxiyopal.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TipoDeProducto");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Color = "#2ce69b",
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(3498),
+                            NombreTipoProducto = "Oxigeno",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(3499)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Color = "#ff708d",
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4194),
+                            NombreTipoProducto = "Acetileno",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4195)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Color = "#444343",
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4201),
+                            NombreTipoProducto = "Nitrogeno",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4202)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Color = "#ffc107",
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4204),
+                            NombreTipoProducto = "Mezcla",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4204)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Color = "#A6ACAF",
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4205),
+                            NombreTipoProducto = "Argon",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4206)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Color = "#42aaff",
+                            CreatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4207),
+                            NombreTipoProducto = "Dioxido de carbono",
+                            UpdatedOn = new DateTime(2019, 11, 10, 19, 43, 38, 338, DateTimeKind.Local).AddTicks(4207)
+                        });
                 });
 
             modelBuilder.Entity("Oxiyopal.Models.Ubicacion", b =>
@@ -216,6 +361,8 @@ namespace Oxiyopal.DataAccess.Migrations
                     b.Property<int?>("ClienteId");
 
                     b.Property<DateTime>("CreatedOn");
+
+                    b.Property<DateTime>("FechaDeTraslado");
 
                     b.Property<DateTime>("UpdatedOn");
 

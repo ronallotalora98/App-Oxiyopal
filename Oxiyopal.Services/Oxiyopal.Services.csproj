@@ -9,8 +9,4 @@
     <ProjectReference Include="..\Oxiyopal.Models\Oxiyopal.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ModelServices\" />
-  </ItemGroup>
-
 </Project>

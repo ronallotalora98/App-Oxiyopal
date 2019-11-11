@@ -1,3 +1,56 @@
-<p>
-  add-cilindro works!
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <nb-card style="height: 100%;">
+      <nb-card-header>Informacion del cilindro</nb-card-header>
+      <nb-card-body>
+          <div class="form-group">
+            <label for="serial" class="label"   [ngClass]="{ 'is-invalid': click && !cilindro.serial }">Serial</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="cilindro.serial" name="serial" id="serial"
+              placeholder="Serial">
+          </div>
+          <div class="form-group" *ngIf="tamanos">
+            <label for="exampleInputPassword1" class="label" [ngClass]="{ 'is-invalid': click && !cilindro.tamano }">Tamaño del cilindro</label>
+            <nb-select fullWidth placeholder="Cantidad" [(ngModel)]="cilindro.tamano" name="tamano">
+              <nb-option value="{{item}}" *ngFor="let item of tamanos">
+                {{item}} m<span style="font-size: 10px;">2</span></nb-option>
+            </nb-select>
+          </div>
+          <div class="form-group" *ngIf="creteViewModel && creteViewModel.estados && creteViewModel.estados.length > 0">
+            <label for=" estado" class="label"  
+             [ngClass]="{ 'is-invalid': click && !cilindro.estadoId }">Estado del Cilindro</label>
+            <nb-select fullWidth placeholder="Estado" [(ngModel)]="cilindro.estadoId" name="estado">
+              <nb-option value="{{status.id}}" *ngFor="let status of creteViewModel.estados">
+                {{status.nombreDeEstado}}
+              </nb-option>
+            </nb-select>
+          </div>      
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class=" col-md-6">
+    <nb-card style="height: 100%;">
+      <nb-card-header  [ngClass]="{ 'is-invalid': click && !cilindro.tipoDeProductoId }" >Tipo de Cilindro</nb-card-header>
+      <nb-card-body>
+
+        <div class="form-group"
+          *ngIf="creteViewModel && creteViewModel.tipoDeProducto && creteViewModel.tipoDeProducto.length > 0">
+          <nb-radio-group [(ngModel)]="cilindro.tipoDeProductoId">
+            <nb-radio value="{{type.id}}" *ngFor="let type of creteViewModel.tipoDeProducto">{{type.nombreTipoProducto}}
+            </nb-radio>
+          </nb-radio-group>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col-md-12">
+        <nb-card>
+            <nb-card-body style="text-align: end;">
+                <button nbButton status="success" (click)="saveCilinder()">Agregar nuevo Cilindro<nb-icon icon="star"></nb-icon></button>
+            </nb-card-body>
+        </nb-card>
+      </div>
+</div>
