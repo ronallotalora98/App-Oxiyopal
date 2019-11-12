@@ -48,5 +48,21 @@ namespace Oxiyopal.Controllers
                 throw ex;
             }
         }
+
+        [Route("getCilinder/{type}")]
+        [ProducesResponseType(typeof(CilindroSearhResultViewModel), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetCilindersForType( string type)
+        {
+            try
+            {
+               var result = await this._cilindroService.GetCilinderForType(type);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

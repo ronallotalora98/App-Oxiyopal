@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-md-12" style="margin-left: auto; margin-right: auto;">
+    <nb-card accent="info">
+      <nb-card-header style="text-align: center;">Crear Nuevo Cliete</nb-card-header>
+      <nb-card-body *ngIf="cliente">
+        <nb-checkbox (checkedChange)="toggle($event)">Es una Empresa</nb-checkbox>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="nombre" class="label" *ngIf="cliente.esEmpresa == false"
+             [ngClass]="{ 'is-invalid': click && !cliente.nombre }">Nombre</label>
+            <label for="nombre" class="label" *ngIf="cliente.esEmpresa == true"
+             [ngClass]="{ 'is-invalid': click && !cliente.nombre }">Nombre de Empresa</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="cliente.nombre" name="nombre" id="nombre"
+              placeholder="nombre">
+          </div>
+          <div class="form-group col-md-6" *ngIf="cliente.esEmpresa == false">
+            <label for="apellido" class="label">Apellido</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="cliente.apellido" name="apellido" id="apellido"
+              placeholder="apellido">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="documento" class="label" *ngIf="cliente.esEmpresa == false"
+            [ngClass]="{ 'is-invalid': click && !cliente.documento }">Documento</label>
+            <label for="documento" class="label" *ngIf="cliente.esEmpresa == true"
+            [ngClass]="{ 'is-invalid': click && !cliente.documento }">Nit</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="cliente.documento" name="documento" id="documento"
+              placeholder="documento">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="telefono" class="label"  [ngClass]="{ 'is-invalid': click && !cliente.telefono }">Telefono</label>
+            <input type="tel" nbInput fullWidth [(ngModel)]="cliente.telefono" name="telefono" id="telefono"
+              placeholder="telefono">
+          </div>
+          <div class="form-group col-md-8" *ngIf="cliente.esEmpresa == false">
+            <label for="direccion" class="label"  [ngClass]="{ 'is-invalid': click && !cliente.nombre }">Dirección</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="cliente.direccion" name="direccion" id="direccion"
+              placeholder="direccion">
+          </div>
+          <div class="form-group col-md-6" *ngIf="cliente.esEmpresa == true">
+              <label for="direccion" class="label"  [ngClass]="{ 'is-invalid': click && !cliente.direccion }">Dirección</label>
+              <input type="text" nbInput fullWidth [(ngModel)]="cliente.direccion" name="direccion" id="direccion"
+                placeholder="direccion">
+            </div>
+          <div class="form-group col-md-12">
+            <label for="descripcion" class="label">Descripcion</label>
+            <textarea nbInput fullWidth placeholder="Textarea" [(ngModel)]="cliente.descripcion" name="descripcion"
+              id="descripcion">
+              </textarea>
+          </div>
+        </div>
+      </nb-card-body>
+      <nb-card-footer style="text-align: end;">
+          <button nbButton status="success" (click)="saveCliente()">Agregar Nuevo Cliente<nb-icon icon="star"></nb-icon></button>
+      </nb-card-footer>
+    </nb-card>
+  </div>
+</div>

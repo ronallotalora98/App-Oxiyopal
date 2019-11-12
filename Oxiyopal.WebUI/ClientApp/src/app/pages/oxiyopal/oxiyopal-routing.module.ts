@@ -5,6 +5,8 @@ import { OxiyopalLayaudComponent } from './oxiyopal-layaud.component';
 import { ControlCilindroComponent } from './control-cilindro/control-cilindro.component';
 import { AddCilindroComponent } from './cilindros/add-cilindro/add-cilindro.component';
 import { ListCilindrosComponent } from './cilindros/list-cilindros/list-cilindros.component';
+import { AddClienteComponent } from './clientes/add-cliente/add-cliente.component';
+import { ListClienteComponent } from './clientes/list-cliente/list-cliente.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,8 @@ const routes: Routes = [
       { path: 'cilindros', component: ControlCilindroComponent },
       { path: 'new-cilindro', component: AddCilindroComponent },
       { path: 'list-cilindros/:type', component: ListCilindrosComponent },
+      { path: 'new-cliente', component: AddClienteComponent },
+      { path: 'list-clientes', component: ListClienteComponent },
     ],
   },
 

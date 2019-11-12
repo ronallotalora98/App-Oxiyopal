@@ -55,7 +55,7 @@ namespace Oxiyopal
 
             services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
             services.AddTransient<ICilindroService, CilindroService>();
-
+            services.AddTransient<ICarteraService, CarteraService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             
         }

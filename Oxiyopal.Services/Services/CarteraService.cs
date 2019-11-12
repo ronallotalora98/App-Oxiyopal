@@ -1,4 +1,5 @@
-﻿using Oxiyopal.Models;
+﻿using Oxiyopal.DataAccess.Repository;
+using Oxiyopal.Models;
 using Oxiyopal.Services.IServices;
 using System;
 using System.Collections.Generic;
@@ -9,13 +10,23 @@ namespace Oxiyopal.Services.Services
 {
     public class CarteraService : ICarteraService
     {
-        public CarteraService()
+        private readonly IRepository<Cliente, int> _clienteRepo;
+        public CarteraService(IRepository<Cliente, int> clienteRepo)
         {
-                
+            this._clienteRepo = clienteRepo;
         }
-        public Task<Cliente> CreateCliente()
+        public async Task CreateCliente(Cliente cliente)
         {
-            throw new NotImplementedException();
+            try
+            {
+                 this._clienteRepo.Add(cliente);
+                await this._clienteRepo.SaveChangeAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public Task<IList<Cliente>> GetClientes()

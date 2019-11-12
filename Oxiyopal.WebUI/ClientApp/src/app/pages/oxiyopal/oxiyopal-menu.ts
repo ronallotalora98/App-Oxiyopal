@@ -4,11 +4,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     {
         title: 'Inicio',
         icon: 'home-outline',
-        link: '/dashboard',
+        link: '/oxi/dashboard',
         home: true,
     },
     {
-        title: 'E-commerce',
+        title: 'Registrar Factura',
         icon: 'edit-2-outline',
         link: '/dashboard',
     },
@@ -33,11 +33,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     {
         title: 'Agregar Cliente',
         icon: 'person-add-outline',
-        link: '/dashboard',
+        link: '/oxi/new-cliente',
     },
     {
         title: 'Actualizar Cartera',
         icon: 'attach-outline',
-        link: '/dashboard',
+        link: '/oxi/list-clientes',
     },
 ];

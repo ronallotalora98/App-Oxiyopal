@@ -1,4 +1,5 @@
 ﻿using Oxiyopal.Models;
+using Oxiyopal.Services.ModelServices;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Oxiyopal.Services.IServices
     public interface ICilindroService
     {
         Task CreateCilinder(Cilindro cilindro);
-        Task<IList<Cilindro>> GetCilinderForType(int typeId);
+        Task<CilindroSearhResultViewModel> GetCilinderForType(string type);
 
         Task UpdateClindro(Cilindro cilindro);
 

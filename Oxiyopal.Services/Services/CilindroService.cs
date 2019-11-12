@@ -3,8 +3,10 @@ using Oxiyopal.DataAccess.Repository;
 using Oxiyopal.Models;
 using Oxiyopal.Models.ViewModels;
 using Oxiyopal.Services.IServices;
+using Oxiyopal.Services.ModelServices;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,6 +38,23 @@ namespace Oxiyopal.Services.Services
                 this._cilindroRepository.Add(cilindro);
                 await this._cilindroRepository.SaveChangeAsync();
 
+                Ubicacion ubicacion = new Ubicacion {
+                    estaEnBodega = true,
+                    BodegaId = 1,
+                    FechaDeTraslado = DateTime.Now
+                };
+                this._ubicacionRepository.Add(ubicacion);
+                await this._ubicacionRepository.SaveChangeAsync();
+
+                HistorialCilindro historial = new HistorialCilindro
+                {
+                    EsUbucacionActual = true,
+                    CilindroId = cilindro.Id,
+                    UbicacionId = ubicacion.Id
+                };
+                this._hisCilindroRepository.Add(historial);
+                await this._hisCilindroRepository.SaveChangeAsync();
+
             }
             catch (Exception ex)
             {
@@ -45,9 +64,16 @@ namespace Oxiyopal.Services.Services
 
         }
 
-        public async Task<IList<Cilindro>> GetCilinderForType(int typeId)
+        public async Task<CilindroSearhResultViewModel> GetCilinderForType(string type)
         {
-            throw new NotImplementedException();
+            var Cilindros = await this._hisCilindroRepository.Query()
+                                       .Include(x=>x.Ubicacion).ThenInclude(x=>x.Bodega)
+                                       .Include(x=>x.Ubicacion.Cliente)
+                                       .Include(x=>x.Cilindro).ThenInclude(x=>x.TipoDeProducto)
+                                       .Where(x=>x.EsUbucacionActual == true && x.Cilindro.TipoDeProducto.NombreTipoProducto.Contains(type))
+                                       .ToListAsync();
+                                   
+            return  new CilindroSearhResultViewModel(Cilindros);
         }
 
         public async Task<IList<Estado>> GetEstados()

@@ -14,6 +14,8 @@ import { CilindroService } from '../../services/cilindro.service';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ListCilindrosComponent } from './cilindros/list-cilindros/list-cilindros.component';
+import { AddClienteComponent } from './clientes/add-cliente/add-cliente.component';
+import { ListClienteComponent } from './clientes/list-cliente/list-cliente.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ListCilindrosComponent } from './cilindros/list-cilindros/list-cilindro
     OxiyopalLayaudComponent,
     ControlCilindroComponent,
     AddCilindroComponent,
-    ListCilindrosComponent],
+    ListCilindrosComponent,
+    AddClienteComponent,
+    ListClienteComponent],
   imports: [
     ThemeModule,
     NbMenuModule,

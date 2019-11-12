@@ -1,34 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { ActivatedRoute } from '@angular/router';
-import { CilindroService } from '../../../../services/cilindro.service';
-import { CilindroSearhResultViewModel } from '../../../../models/CilindroViewModel/CilindroSearhResultViewModel';
 
 @Component({
-  selector: 'ngx-list-cilindros',
-  templateUrl: './list-cilindros.component.html',
-  styleUrls: ['./list-cilindros.component.scss']
+  selector: 'ngx-list-cliente',
+  templateUrl: './list-cliente.component.html',
+  styleUrls: ['./list-cliente.component.scss']
 })
-export class ListCilindrosComponent implements OnInit {
+export class ListClienteComponent implements OnInit {
 
-  typeCilinder: string;
-  filtrarCilindro: string;
-  constructor(private activateRoute: ActivatedRoute,
-              private cilindroService: CilindroService) { }
-
-  cilindroResult:CilindroSearhResultViewModel;
-  ngOnInit() {
-    this.activateRoute.params.subscribe(params => {
-      this.typeCilinder = params.type;
-
-      this.cilindroService.GetCilindersForType(this.typeCilinder).subscribe(res=>{
-        this.cilindroResult = res;
-        console.log(this.cilindroResult);
-      });
-    });
-    this.loadTable();
-  }
-
+  constructor() { }
   settings = {
     actions: {
       columnTitle: 'Actions',
@@ -51,35 +31,37 @@ export class ListCilindrosComponent implements OnInit {
         title: 'ID',
         type: 'number',
       },
-      serial: {
-        title: 'Serial',
+      nombre: {
+        title: 'Nombre',
         type: 'string',
       },
-      ubicacion: {
-        title: 'Ubicación',
+      telefono: {
+        title: 'Telefono',
         type: 'string',
       },
-      donde: {
-        title: 'Donde',
+      direccion: {
+        title: 'Dirección',
         type: 'string',
       },
-      desde: {
-        title: 'Desde',
+      ciudad: {
+        title: 'Ciudad',
         type: 'string',
       },
     },
   };
   data = [];
   source: LocalDataSource = new LocalDataSource();
-
+  ngOnInit() {
+    this.loadTable();
+  }
   loadTable() {
     for (let i = 0; i < 50; i++) {
       this.data.push({
         id: i,
-        serial: 'l' + i,
-        ubicacion: 'a' + i,
-        donde: 'd' + i,
-        desde : 'c' + i,
+        nombre: 'l' + i,
+        telefono: 'a' + i,
+        direccion: 'd' + i,
+        ciudad : 'c' + i,
       });
     }
     this.source.load(this.data);
@@ -108,19 +90,19 @@ export class ListCilindrosComponent implements OnInit {
         search: query,
       },
       {
-        field: 'serial',
+        field: 'nombre',
         search: query,
       },
       {
-        field: 'ubicacion',
+        field: 'telefono',
         search: query,
       },
       {
-        field: 'donde',
+        field: 'direccion',
         search: query,
       },
       {
-        field: 'desde',
+        field: 'ciudad',
         search: query,
       },
     ], false);

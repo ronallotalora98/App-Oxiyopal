@@ -1,7 +1,7 @@
 ﻿import { EntityBase } from './Base/EntityBase';
 import { Cilindro } from './Cilindro';
 
-export interface TipoDeProducto extends EntityBase<number> {
+export class TipoDeProducto extends EntityBase<number> {
     nombreTipoProducto: string;
     color: string;
 

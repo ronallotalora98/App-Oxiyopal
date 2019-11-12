@@ -8,7 +8,7 @@ namespace Oxiyopal.Services.IServices
 {
     public interface ICarteraService
     {
-        Task<Cliente> CreateCliente();
+        Task CreateCliente(Cliente cliente);
         Task<IList<Cliente>> GetClientes();
 
         Task<Cliente> GetClienteSeleted(int clienteId);

@@ -2,7 +2,7 @@
 import { Cilindro } from '../Cilindro';
 import { Ubicacion } from '../Ubicacion';
 
-export interface HistorialCilindro extends EntityBase<number> {
+export class HistorialCilindro extends EntityBase<number> {
     cilindroId: number;
     cilindro: Cilindro;
 

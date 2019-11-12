@@ -3,7 +3,7 @@ import { Ciudad } from './Ciudad';
 import { Ubicacion } from './Ubicacion';
 import { Factura } from './Factura';
 
-export interface Cliente extends EntityBase<number> {
+export class Cliente extends EntityBase<number> {
 
     nombre: string;
     apellido: string;
@@ -18,5 +18,9 @@ export interface Cliente extends EntityBase<number> {
     ciudad: Ciudad;
     ubicaciones: Ubicacion[];
     facturas: Factura[];
+
+    constructor() {
+        super();
+    }
 }
 

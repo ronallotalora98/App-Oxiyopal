@@ -3,7 +3,7 @@ import { HistorialCilindro } from './ViewModels/HistorialCilindro';
 import { Cliente } from './Cliente';
 import { Bodega } from './Bodega';
 
-export interface Ubicacion extends EntityBase<number> {
+export class Ubicacion extends EntityBase<number> {
     estaEnBodega: boolean;
     fechaDeTraslado: Date | string;
 

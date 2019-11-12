@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { CreateCilinderViewModel } from '../models/CilindroViewModel/CreateCilinderViewModel';
 import { HttpClient } from '@angular/common/http';
 import { Cilindro } from '../models/Cilindro';
+import { CilindroSearhResultViewModel } from '../models/CilindroViewModel/CilindroSearhResultViewModel';
 
 @Injectable({
   providedIn: 'root',
@@ -21,5 +22,10 @@ export class CilindroService {
   CreateNewCilinder(cilindro: Cilindro) {
     const callUrl = `${this.baseUrl}/Cilindro/createCilinder`;
     return this.http.post(callUrl, cilindro);
+  }
+
+  GetCilindersForType(type: string): Observable<CilindroSearhResultViewModel> {
+    const callUrl = `${this.baseUrl}/Cilindro/getCilinder/${type}`;
+    return this.http.get<CilindroSearhResultViewModel>(callUrl);
   }
 }
