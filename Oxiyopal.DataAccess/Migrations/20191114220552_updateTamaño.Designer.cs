@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Oxiyopal.DataAccess;
 
 namespace Oxiyopal.DataAccess.Migrations
 {
     [DbContext(typeof(OxiyopalDbContext))]
-    partial class OxiyopalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191114220552_updateTamaño")]
+    partial class updateTamaño
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

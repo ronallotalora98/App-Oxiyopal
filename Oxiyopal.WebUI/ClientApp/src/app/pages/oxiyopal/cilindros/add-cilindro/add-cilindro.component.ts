@@ -18,7 +18,7 @@ export class AddCilindroComponent implements OnInit {
     private router: Router) { }
 
   cilindro: Cilindro;
-  tamanos: number[] = [3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9];
+  tamanos: string[] = ['3', '3.5', '4', '4.5', '5', '5.5', '6', '6.5', '7', '7.5', '8', '8.5', '9'];
   creteViewModel: CreateCilinderViewModel;
   click = false;
   private alert: any;

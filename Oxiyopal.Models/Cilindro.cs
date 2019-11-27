@@ -10,7 +10,7 @@ namespace Oxiyopal.Models
     public class Cilindro : EntityBase<int>
     {
         public string Serial { get; set; }
-        public decimal Tamaño { get; set; }
+        public string Tamaño { get; set; }
 
         public int TipoDeProductoId { get; set; }
         public TipoDeProducto TipoDeProducto { get; set; }
