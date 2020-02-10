@@ -9,7 +9,7 @@
             <label for="nombre" class="label" *ngIf="cliente.esEmpresa == false"
              [ngClass]="{ 'is-invalid': click && !cliente.nombre }">Nombre</label>
             <label for="nombre" class="label" *ngIf="cliente.esEmpresa == true"
-             [ngClass]="{ 'is-invalid': click && !cliente.nombre }">Nombre de Empresa</label>
+             [ngClass]="{ 'is-invalid': click && !cliente.nombre }">Razon social</label>
             <input type="text" nbInput fullWidth [(ngModel)]="cliente.nombre" name="nombre" id="nombre"
               placeholder="nombre">
           </div>

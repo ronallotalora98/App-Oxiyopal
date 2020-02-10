@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from '../../../../models/Cliente';
 import { NbToastrService, NbGlobalPhysicalPosition } from '@nebular/theme';
+import { ClienteService } from '../../../../services/cliente.service';
+import { Router } from '@angular/router';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -10,7 +12,9 @@ import { NbToastrService, NbGlobalPhysicalPosition } from '@nebular/theme';
 })
 export class AddClienteComponent implements OnInit {
 
-  constructor( private toastrService: NbToastrService) { }
+  constructor(private toastrService: NbToastrService,
+    private clienteService: ClienteService,
+    private router: Router) { }
   cliente: Cliente;
   click = false;
   private alert: any;
@@ -26,7 +30,9 @@ export class AddClienteComponent implements OnInit {
   saveCliente() {
     this.click = true;
     if (this.cliente.nombre && this.cliente.documento && this.cliente.direccion && this.cliente.telefono) {
-      console.log(this.cliente);
+      this.clienteService.CreateNewClient(this.cliente).subscribe(res => {
+        this.router.navigate(['/oxi/clientes']);
+      });
     } else {
       this.alert = this.toastrService.show(
         'Completa los campos que estan en rojo',

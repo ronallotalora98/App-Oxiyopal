@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-8">
+    <nb-card style="height: 100%;">
+      <nb-card-header>Serial : H123</nb-card-header>
+      <nb-card-body>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="serial" class="label" [ngClass]="{ 'is-invalid': click && !cilindro.serial }">Tipo</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="cilindro.tipoDeProductoId" name="serial" id="serial"
+              placeholder="Serial">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="serial" class="label" [ngClass]="{ 'is-invalid': click && !cilindro.serial }">Tamaño</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="cilindro.serial" name="serial" id="serial"
+              placeholder="Serial">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="serial" class="label" [ngClass]="{ 'is-invalid': click && !cilindro.serial }">Estado</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="cilindro.serial" name="serial" id="serial"
+              placeholder="Serial">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="label" [ngClass]="{ 'is-invalid': click && !cilindro.tamano }">Ubicacion</label>
+            <nb-select fullWidth placeholder="Cantidad"  name="tamano">
+              <nb-option value="1">
+               Bodega</nb-option>
+                <nb-option value="2" >
+                 Cliente</nb-option>
+            </nb-select>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class=" col-md-4">
+    <nb-card style="height: 100%;">
+      <nb-card-header [ngClass]="{ 'is-invalid': click && !cilindro.tipoDeProductoId }">Historial</nb-card-header>
+      <nb-card-body>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

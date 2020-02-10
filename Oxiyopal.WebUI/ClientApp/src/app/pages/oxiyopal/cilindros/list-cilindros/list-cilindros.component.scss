@@ -6,9 +6,9 @@
   :host /deep/ ng2-st-tbody-custom a.ng2-smart-action.ng2-smart-action-custom-custom {
     display: inline-block;
     width: 50px;
-    margin-left: 16%;
+   
     text-align: center !important;
-    font-size: 1.1em;
+    font-size: 1.5em !important;
   }
   
   :host /deep/ ng2-st-tbody-custom a.ng2-smart-action.ng2-smart-action-custom-custom:hover {
@@ -18,11 +18,13 @@
   :host /deep/ ng2-st-tbody-custom a.ng2-smart-action.ng2-smart-action-custom-custom {
     .enviar {
       color: #0093ff;
+      
     }
   }
   
   :host /deep/ ng2-st-tbody-custom a.ng2-smart-action.ng2-smart-action-custom-custom {
     .ver {
       color: #2ef318;
+      margin-left: 16%;
     }
   }

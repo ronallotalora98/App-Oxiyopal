@@ -1,6 +1,6 @@
 export class CilindroSearhResultViewModel {
 
-    cilindros: CilindroResult;
+    cilindros: CilindroResult[];
 }
 
 export class CilindroResult {

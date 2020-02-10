@@ -19,5 +19,6 @@ namespace Oxiyopal.Services.IServices
 
         Task<IList<TipoDeProducto>> GetTipoDeProductos();
         Task<IList<Estado>> GetEstados();
+        Task GetCilinder(int cilindroId);
     }
 }

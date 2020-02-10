@@ -1,0 +1,30 @@
+<nb-card size="medium">
+
+  <nb-card-header>
+    <span>Cilindros Mas Antiguos</span>
+     </nb-card-header>
+
+  <nb-list class="user-activity-list">
+    <nb-list-item *ngFor="let item of cilindros">
+
+      <div class="visited-date">
+        {{ item.serial }}
+      </div>
+
+      <div class="visited-pages-count">
+        <div class="caption">Tiempo en Unicacion</div>
+        <div class="value">{{ item.dias }}</div>
+      </div>
+
+      <div class="visited-percentages">
+        <div class="caption">Ubicacion</div>
+        <div class="delta value">
+          
+          {{ item.ublicacion }}
+        </div>
+      </div>
+
+    </nb-list-item>
+  </nb-list>
+
+</nb-card>

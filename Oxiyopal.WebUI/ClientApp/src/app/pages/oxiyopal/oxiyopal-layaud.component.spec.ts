@@ -8,7 +8,7 @@ describe('OxiyopalLayaudComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OxiyopalLayaudComponent ]
+      declarations: [ OxiyopalLayaudComponent ],
     })
     .compileComponents();
   }));

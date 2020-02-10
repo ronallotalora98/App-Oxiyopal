@@ -1,0 +1,61 @@
+<nb-card size="size-medium">
+  <nb-tabset fullWidth (changeTab)="changeTab($event)">
+    <nb-tab tabTitle="Flujo de ventas" style="padding: 0;">
+      <div class="chart-container">
+        <!-- <ngx-chart-panel-summary [summary]="chartPanelSummary"></ngx-chart-panel-summary> -->
+        <div class="summary-container">
+          <div *ngFor="let item of sales">
+            <div>{{ item.title }}</div>
+            <div class="h6">{{ item.value }}</div>
+          </div>
+        </div>
+        <div class="types-container">
+          <nb-checkbox status="success">Oxigeno</nb-checkbox>
+          <nb-checkbox status="danger">Acetileno</nb-checkbox>
+          <!-- <nb-checkbox status="primary">Nitrogeno</nb-checkbox> -->
+          <nb-checkbox status="warning">Mexcla</nb-checkbox>
+          <!-- <nb-checkbox status="basic">Argon</nb-checkbox> -->
+          <nb-checkbox status="info">Co2</nb-checkbox>
+
+          <nb-select class="period-select" [selected]="type" (selectedChange)="setPeriodAndGetChartData($event)">
+            <nb-option *ngFor="let period of types" [value]="period">
+              {{ period }}
+            </nb-option>
+          </nb-select>
+        </div>
+        <!-- <ngx-chart-panel-header [type]="period" (periodChange)="setPeriodAndGetChartData($event)">
+        </ngx-chart-panel-header> -->
+        <ngx-orders-chart></ngx-orders-chart>
+      </div>
+    </nb-tab>
+    <nb-tab tabTitle="Tabla" [lazyLoad]="true" style="padding: 0;">
+      <div class="chart-container">
+        <!-- <div class="summary-container">
+          <div *ngFor="let item of chartPanelSummary">
+            <div>{{ item.title }}</div>
+            <div class="h6">{{ item.value }}</div>
+          </div>
+        </div>
+        <div class="types-container">
+          <nb-checkbox status="basic">Uno</nb-checkbox>
+          <nb-checkbox status="primary">Dos</nb-checkbox>
+          <nb-checkbox status="success">Tres</nb-checkbox>
+          <nb-checkbox status="danger">Cuatro</nb-checkbox>
+          <nb-checkbox status="warning">Cinco</nb-checkbox>
+          <nb-checkbox status="info">Seis</nb-checkbox>
+
+          <nb-select class="period-select" [selected]="type" (selectedChange)="setPeriodAndGetChartData($event)">
+            <nb-option *ngFor="let period of types" [value]="period">
+              {{ period }}
+            </nb-option>
+          </nb-select>
+        </div> -->
+        <ngx-profit-chart></ngx-profit-chart>
+        <!-- <ngx-chart-panel-summary [summary]="chartPanelSummary"></ngx-chart-panel-summary>
+        <ngx-chart-panel-header [type]="period" (periodChange)="setPeriodAndGetChartData($event)">
+        </ngx-chart-panel-header> -->
+        <!-- <ngx-profit-chart #profitChart [profitChartData]="profitChartData"></ngx-profit-chart> -->
+      </div>
+    </nb-tab>
+  </nb-tabset>
+</nb-card>

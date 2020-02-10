@@ -7,6 +7,7 @@ import { AddCilindroComponent } from './cilindros/add-cilindro/add-cilindro.comp
 import { ListCilindrosComponent } from './cilindros/list-cilindros/list-cilindros.component';
 import { AddClienteComponent } from './clientes/add-cliente/add-cliente.component';
 import { ListClienteComponent } from './clientes/list-cliente/list-cliente.component';
+import { EditCilindrosComponent } from './cilindros/edit-cilindros/edit-cilindros.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
       { path: 'cilindros', component: ControlCilindroComponent },
       { path: 'new-cilindro', component: AddCilindroComponent },
       { path: 'list-cilindros/:type', component: ListCilindrosComponent },
+      { path: 'edit-cilindro/:type/:id', component: EditCilindrosComponent },
       { path: 'new-cliente', component: AddClienteComponent },
       { path: 'list-clientes', component: ListClienteComponent },
     ],

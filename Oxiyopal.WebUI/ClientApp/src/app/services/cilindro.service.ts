@@ -28,4 +28,9 @@ export class CilindroService {
     const callUrl = `${this.baseUrl}/Cilindro/getCilinder/${type}`;
     return this.http.get<CilindroSearhResultViewModel>(callUrl);
   }
+
+  UpdateNewCilinder(cilindro: Cilindro) {
+    const callUrl = `${this.baseUrl}/Cilindro/updateCilinder`;
+    return this.http.post(callUrl, cilindro);
+  }
 }

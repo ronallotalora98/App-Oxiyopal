@@ -3,32 +3,40 @@ import { LocalDataSource } from 'ng2-smart-table';
 import { ActivatedRoute } from '@angular/router';
 import { CilindroService } from '../../../../services/cilindro.service';
 import { CilindroSearhResultViewModel } from '../../../../models/CilindroViewModel/CilindroSearhResultViewModel';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { DatePipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ngx-list-cilindros',
   templateUrl: './list-cilindros.component.html',
-  styleUrls: ['./list-cilindros.component.scss']
+  styleUrls: ['./list-cilindros.component.scss'],
 })
 export class ListCilindrosComponent implements OnInit {
 
   typeCilinder: string;
   filtrarCilindro: string;
   constructor(private activateRoute: ActivatedRoute,
-              private cilindroService: CilindroService) { }
+    private cilindroService: CilindroService,
+    private spinner: NgxSpinnerService,
+    private datePipe: DatePipe,
+    private router: Router) { }
 
-  cilindroResult:CilindroSearhResultViewModel;
+  cilindroResult: CilindroSearhResultViewModel;
   ngOnInit() {
     this.activateRoute.params.subscribe(params => {
       this.typeCilinder = params.type;
-
-      this.cilindroService.GetCilindersForType(this.typeCilinder).subscribe(res=>{
+      this.spinner.show('tableCilinders', {
+        fullScreen: false,
+      });
+      this.cilindroService.GetCilindersForType(this.typeCilinder).subscribe(res => {
         this.cilindroResult = res;
-        console.log(this.cilindroResult);
+        this.loadTable();
       });
     });
-    this.loadTable();
   }
-
+  // <i class="fas fa-paper-plane enviar"></i>
+  // &nbsp;&nbsp;<i class="fas fa-edit ver"></i>
   settings = {
     actions: {
       columnTitle: 'Actions',
@@ -36,8 +44,8 @@ export class ListCilindrosComponent implements OnInit {
       edit: false,
       delete: false,
       custom: [
-        { name: 'viewrecord', title: '<i class="fas fa-paper-plane enviar"></i>' },
-        { name: 'editrecord', title: '&nbsp;&nbsp;<i class="fas fa-edit ver"></i>' },
+        { name: 'viewrecord', title: '<i class="fas fa-paper-plane enviar"> Ver</i>' },
+        { name: 'editrecord', title: '&nbsp;&nbsp;<i class="fas fa-edit ver"> Editar</i>' },
       ],
       position: 'right',
     },
@@ -73,16 +81,32 @@ export class ListCilindrosComponent implements OnInit {
   source: LocalDataSource = new LocalDataSource();
 
   loadTable() {
-    for (let i = 0; i < 50; i++) {
+    // for (let i = 0; i < 50; i++) {
+    //   this.data.push({
+    //     id: i,
+    //     serial: 'l' + i,
+    //     ubicacion: 'a' + i,
+    //     donde: 'd' + i,
+    //     desde: 'c' + i,
+    //   });
+    // }
+    let aux = '';
+    this.cilindroResult.cilindros.forEach(cilinder => {
+      if (cilinder.ubicacion.estaEnBodega == true) {
+        aux = 'Bodega';
+      } else {
+        aux = 'Cliente';
+      }
       this.data.push({
-        id: i,
-        serial: 'l' + i,
-        ubicacion: 'a' + i,
-        donde: 'd' + i,
-        desde : 'c' + i,
+        id: cilinder.cilindroId,
+        serial: cilinder.serial,
+        ubicacion: aux,
+        donde: cilinder.ubicacion.nombreUbicacion,
+        desde: this.datePipe.transform(cilinder.ubicacion.fechaDeTraslado, 'dd-MMM-yyyy'),
       });
-    }
+    });
     this.source.load(this.data);
+    this.spinner.hide('tableCilinders');
   }
   onCustomAction(event) {
     switch (event.action) {
@@ -90,7 +114,7 @@ export class ListCilindrosComponent implements OnInit {
         /// Ver
         break;
       case 'editrecord':
-      // Editar
+        this.router.navigate(['/oxi/edit-cilindro/' + this.typeCilinder, event.data.id]);
     }
   }
 

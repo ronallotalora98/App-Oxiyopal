@@ -1,0 +1,18 @@
+<nb-card size="small" style="box-shadow: none !important;">
+  <nb-card-header>
+    <span>Informacion General</span>
+    <nb-select [selected]="type" (selectedChange)="changePeriod($event)">
+      <nb-option *ngFor="let period of types" [value]="period">{{ period }}</nb-option>
+    </nb-select>
+  </nb-card-header>
+  <nb-list>
+    <nb-list-item class="item" *ngFor="let item of productos">
+      <span>{{ item.name }}</span>
+      <span>{{ item.value }}</span>
+      <span class="delta" [class.up]="item.up" [class.down]="!item.up">
+        <nb-icon [icon]="item.up ? 'arrow-up' : 'arrow-down'" pack="eva"></nb-icon>
+        {{ item.percent }}%
+      </span>
+    </nb-list-item>
+  </nb-list>
+</nb-card>

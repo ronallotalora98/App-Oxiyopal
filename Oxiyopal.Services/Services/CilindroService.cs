@@ -64,6 +64,18 @@ namespace Oxiyopal.Services.Services
 
         }
 
+        public async Task GetCilinder(int cilindroId)
+        {
+            var cilindro = await this._cilindroRepository.Query()
+                                     .Include(x => x.TipoDeProducto)
+                                     .Include(x => x.Estado)
+                                     .Include(x => x.HistorialCilindros).ThenInclude(x => x.Ubicacion).ThenInclude(x => x.Cliente)
+                                     .Include(x => x.HistorialCilindros).ThenInclude(x => x.Ubicacion).ThenInclude(x => x.Cliente)
+                                     .Where(x => x.Id == cilindroId)
+                                     .FirstOrDefaultAsync();
+            return new CilindroSearchResult(cilindro);
+        }
+
         public async Task<CilindroSearhResultViewModel> GetCilinderForType(string type)
         {
             var Cilindros = await this._hisCilindroRepository.Query()

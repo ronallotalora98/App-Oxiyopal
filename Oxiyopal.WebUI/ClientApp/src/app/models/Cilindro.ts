@@ -14,7 +14,7 @@ export class Cilindro extends EntityBase<number> {
     estadoId: number;
     estado: Estado;
 
-    historialCilindros: HistorialCilindro;
+    historialCilindros: HistorialCilindro[];
     historialDeFacturas: HistorialDeFactura[];
 
 }

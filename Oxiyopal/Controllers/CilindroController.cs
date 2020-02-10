@@ -64,5 +64,21 @@ namespace Oxiyopal.Controllers
                 throw ex;
             }
         }
+
+        [Route("updateCilinder")]
+        [ProducesResponseType(typeof(Cilindro), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> UpdateNewCilinder([FromBody] Cilindro cilindro)
+        {
+            try
+            {
+                // await this._cilindroService.CreateCilinder(cilindro);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
