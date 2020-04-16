@@ -20,6 +20,7 @@ namespace Oxiyopal.Controllers
         {
             this._cilindroService = cilindroService;
         }
+        [HttpGet]
         [Route("formCreate")]
         [ProducesResponseType(typeof(CreateCilinderViewModel), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetStatusAndTypeProduc()
@@ -33,6 +34,10 @@ namespace Oxiyopal.Controllers
 
         }
 
+        /// <summary>
+        /// Create to new cilindor 
+        /// </summary>
+        [HttpPost]
         [Route("createCilinder")]
         [ProducesResponseType(typeof(Cilindro), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> CreateNewCilinder([FromBody] Cilindro cilindro)
@@ -49,6 +54,7 @@ namespace Oxiyopal.Controllers
             }
         }
 
+        [HttpGet]
         [Route("getCilinder/{type}")]
         [ProducesResponseType(typeof(CilindroSearhResultViewModel), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetCilindersForType( string type)
@@ -65,6 +71,28 @@ namespace Oxiyopal.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("obtenerCilindro/{id}")]
+        [ProducesResponseType(typeof(CilindroSearchResult), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetCilinder(int id)
+        {
+            try
+            {
+                var result = await this._cilindroService.GetCilinder(id);
+                var historial = await this._cilindroService.getHistorial(id);
+
+                var model = new CilindroSearchResult(result, historial);
+
+                return Ok(model);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        [HttpPut]
         [Route("updateCilinder")]
         [ProducesResponseType(typeof(Cilindro), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> UpdateNewCilinder([FromBody] Cilindro cilindro)

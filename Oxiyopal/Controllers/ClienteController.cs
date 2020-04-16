@@ -20,6 +20,7 @@ namespace Oxiyopal.Controllers
             this._carteraService = carteraService;
         }
 
+        [HttpPost]
         [Route("createCliente")]
         [ProducesResponseType(typeof(Cliente), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> CreateNewClient([FromBody] Cliente cliente)

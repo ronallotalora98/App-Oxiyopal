@@ -1,4 +1,5 @@
 ﻿using Oxiyopal.Models;
+using Oxiyopal.Models.ViewModels;
 using Oxiyopal.Services.ModelServices;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace Oxiyopal.Services.IServices
 
         Task<IList<TipoDeProducto>> GetTipoDeProductos();
         Task<IList<Estado>> GetEstados();
-        Task GetCilinder(int cilindroId);
+        Task<Cilindro> GetCilinder(int cilindroId);
+        Task<IList<HistorialCilindro>> getHistorial(int cilindroId);
     }
 }

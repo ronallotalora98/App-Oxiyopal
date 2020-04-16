@@ -29,8 +29,13 @@ export class CilindroService {
     return this.http.get<CilindroSearhResultViewModel>(callUrl);
   }
 
+  GetCilindro(cilindroId: number): Observable<any> {
+    const callUrl = `${this.baseUrl}/Cilindro/obtenerCilindro/${cilindroId}`;
+    return this.http.get<any>(callUrl);
+  }
+
   UpdateNewCilinder(cilindro: Cilindro) {
     const callUrl = `${this.baseUrl}/Cilindro/updateCilinder`;
-    return this.http.post(callUrl, cilindro);
+    return this.http.put(callUrl, cilindro);
   }
 }
