@@ -48,7 +48,7 @@ namespace Oxiyopal.Services.ModelServices
             this._cilindro = new Cilindro {
                 Id = cilindro.Id,
                 Serial = cilindro.Serial,
-                Tamaño = cilindro.Tamaño,
+                Cantidad = cilindro.Cantidad,
                 TipoDeProductoId = cilindro.TipoDeProductoId,
                 TipoDeProducto = new TipoDeProducto
                 {

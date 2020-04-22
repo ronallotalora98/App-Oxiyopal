@@ -15,6 +15,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/oxiyopal/oxiyopal.module')
       .then(m => m.OxiyopalModule),
   },
+  // {
+  //   path: 'cilindros',
+  //   loadChildren: () => import('./pages/oxiyopal/cilindros/oxi-cilindros.module')
+  //     .then(m => m.OxiCilindrosModule),
+  // },
   {
     path: 'auth',
     component: NbAuthComponent,

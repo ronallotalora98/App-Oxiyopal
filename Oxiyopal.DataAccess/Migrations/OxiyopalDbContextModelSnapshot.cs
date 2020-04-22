@@ -46,28 +46,28 @@ namespace Oxiyopal.DataAccess.Migrations
                         {
                             Id = 1,
                             CiudadId = 1,
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(1687),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(3222),
                             Direccion = "",
                             NombreBodega = "Bodega LLenas",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(1689)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(3225)
                         },
                         new
                         {
                             Id = 2,
                             CiudadId = 1,
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(2823),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(5207),
                             Direccion = "",
                             NombreBodega = "Bodega Vacias",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(2824)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(5211)
                         },
                         new
                         {
                             Id = 3,
                             CiudadId = 2,
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(2834),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(5227),
                             Direccion = "",
                             NombreBodega = "Planta de LLenado",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(2834)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(5228)
                         });
                 });
 
@@ -77,13 +77,13 @@ namespace Oxiyopal.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Cantidad");
+
                     b.Property<DateTime>("CreatedOn");
 
                     b.Property<int>("EstadoId");
 
                     b.Property<string>("Serial");
-
-                    b.Property<string>("Tamaño");
 
                     b.Property<int>("TipoDeProductoId");
 
@@ -122,18 +122,18 @@ namespace Oxiyopal.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(189),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(412),
                             DepartamentoId = 1,
                             NombreCiudad = "Yopal",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(191)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(416)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(994),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(1894),
                             DepartamentoId = 2,
                             NombreCiudad = "Bogota",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(996)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(1897)
                         });
                 });
 
@@ -190,16 +190,16 @@ namespace Oxiyopal.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 538, DateTimeKind.Local).AddTicks(671),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 305, DateTimeKind.Local).AddTicks(4030),
                             NombreDepartamento = "Casanare",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 538, DateTimeKind.Local).AddTicks(6789)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 306, DateTimeKind.Local).AddTicks(4536)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 538, DateTimeKind.Local).AddTicks(8203),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 306, DateTimeKind.Local).AddTicks(7091),
                             NombreDepartamento = "Cundinamarca",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 538, DateTimeKind.Local).AddTicks(8208)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 306, DateTimeKind.Local).AddTicks(7099)
                         });
                 });
 
@@ -226,33 +226,33 @@ namespace Oxiyopal.DataAccess.Migrations
                         {
                             Id = 1,
                             ColorDeEstado = "#00FF00",
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4830),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(8957),
                             NombreDeEstado = "Lleno",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4831)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(8960)
                         },
                         new
                         {
                             Id = 2,
                             ColorDeEstado = "#FF3300",
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(5529),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 308, DateTimeKind.Local).AddTicks(255),
                             NombreDeEstado = "Vacio",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(5531)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 308, DateTimeKind.Local).AddTicks(257)
                         },
                         new
                         {
                             Id = 3,
                             ColorDeEstado = "#FFFF00",
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(5537),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 308, DateTimeKind.Local).AddTicks(271),
                             NombreDeEstado = "En mantenimiento",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(5537)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 308, DateTimeKind.Local).AddTicks(272)
                         },
                         new
                         {
                             Id = 4,
                             ColorDeEstado = "#17202A",
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(5538),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 308, DateTimeKind.Local).AddTicks(273),
                             NombreDeEstado = "Dañado",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(5539)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 308, DateTimeKind.Local).AddTicks(274)
                         });
                 });
 
@@ -304,49 +304,49 @@ namespace Oxiyopal.DataAccess.Migrations
                         {
                             Id = 1,
                             Color = "#2ce69b",
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(3466),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(6344),
                             NombreTipoProducto = "Oxigeno",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(3467)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(6346)
                         },
                         new
                         {
                             Id = 2,
                             Color = "#ff708d",
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4185),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(7825),
                             NombreTipoProducto = "Acetileno",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4187)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(7828)
                         },
                         new
                         {
                             Id = 3,
                             Color = "#444343",
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4194),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(7839),
                             NombreTipoProducto = "Nitrogeno",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4194)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(7840)
                         },
                         new
                         {
                             Id = 4,
                             Color = "#ffc107",
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4195),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(7842),
                             NombreTipoProducto = "Mezcla",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4196)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(7843)
                         },
                         new
                         {
                             Id = 5,
                             Color = "#A6ACAF",
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4197),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(7845),
                             NombreTipoProducto = "Argon",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4197)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(7845)
                         },
                         new
                         {
                             Id = 6,
                             Color = "#42aaff",
-                            CreatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4198),
+                            CreatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(7847),
                             NombreTipoProducto = "Dioxido de carbono",
-                            UpdatedOn = new DateTime(2019, 11, 14, 17, 5, 52, 539, DateTimeKind.Local).AddTicks(4198)
+                            UpdatedOn = new DateTime(2020, 4, 21, 15, 33, 34, 307, DateTimeKind.Local).AddTicks(7848)
                         });
                 });
 

@@ -31,7 +31,7 @@ export class AddCilindroComponent implements OnInit {
 
   saveCilinder() {
     this.click = true;
-    if (this.cilindro.tipoDeProductoId && this.cilindro.estadoId && this.cilindro.serial && this.cilindro.tamano) {
+    if (this.cilindro.tipoDeProductoId && this.cilindro.estadoId && this.cilindro.serial && this.cilindro.cantidad) {
       this.cilindroService.CreateNewCilinder(this.cilindro).subscribe(res => {
         this.router.navigate(['/oxi/cilindros']);
       });

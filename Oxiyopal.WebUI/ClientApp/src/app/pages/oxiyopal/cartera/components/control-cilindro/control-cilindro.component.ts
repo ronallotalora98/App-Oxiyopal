@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'ngx-control-cilindro',
@@ -8,11 +7,9 @@ import { Router } from '@angular/router';
 })
 export class ControlCilindroComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
   }
-  goToList(type: string) {
-    this.router.navigate(['/oxi/list-cilindros/' + type]);
-  }
+
 }

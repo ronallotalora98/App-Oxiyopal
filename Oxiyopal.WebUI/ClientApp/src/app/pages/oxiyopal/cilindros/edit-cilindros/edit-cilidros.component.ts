@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CilindroService } from '../../../../services/cilindro.service';
 import { Cilindro } from '../../../../models/Cilindro';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'ngx-edit-cilindros',
-  templateUrl: './edit-cilindros.component.html',
-  styleUrls: ['./edit-cilindros.component.scss']
+  selector: 'ngx-edit-cilidros',
+  templateUrl: './edit-cilidros.component.html',
+  styleUrls: ['./edit-cilidros.component.scss']
 })
-export class EditCilindrosComponent implements OnInit {
+export class EditCilidrosComponent implements OnInit {
 
   constructor(private cilindroService: CilindroService,
     private activateRoute: ActivatedRoute) { }
@@ -26,5 +26,4 @@ export class EditCilindrosComponent implements OnInit {
 
     });
   }
-
 }

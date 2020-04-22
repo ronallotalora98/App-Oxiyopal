@@ -19,12 +19,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     {
         title: 'Agregar Cilindro',
         icon: 'plus-square-outline',
-        link: '/oxi/new-cilindro',
+        link: '/oxi/cilindros/new-cilindro',
     },
     {
         title: 'Control Cilindro',
         icon: 'list-outline',
-        link: '/oxi/cilindros',
+        link: '/oxi/cilindros/tipos',
     },
     {
         title: 'Cartera',
@@ -33,11 +33,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     {
         title: 'Agregar Cliente',
         icon: 'person-add-outline',
-        link: '/oxi/new-cliente',
+        link: '/oxi/clientes/new-cliente',
     },
     {
         title: 'Actualizar Cartera',
         icon: 'attach-outline',
-        link: '/oxi/list-clientes',
+        link: '/oxi/clientes/list-clientes',
     },
 ];

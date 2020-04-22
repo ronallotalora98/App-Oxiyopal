@@ -10,30 +10,24 @@ import { ThemeModule } from '../../@theme/theme.module';
 import { NbMenuModule, NbCardModule, NbIconModule, NbButtonModule,
    NbInputModule, NbCheckboxModule, NbRadioModule, NbSelectModule,
     NbToastrModule } from '@nebular/theme';
-import { ControlCilindroComponent } from './control-cilindro/control-cilindro.component';
-import { AddCilindroComponent } from './cilindros/add-cilindro/add-cilindro.component';
 import { CilindroService } from '../../services/cilindro.service';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { ListCilindrosComponent } from './cilindros/list-cilindros/list-cilindros.component';
-import { AddClienteComponent } from './clientes/add-cliente/add-cliente.component';
-import { ListClienteComponent } from './clientes/list-cliente/list-cliente.component';
 import { ClienteService } from '../../services/cliente.service';
-import { EditCilindrosComponent } from './cilindros/edit-cilindros/edit-cilindros.component';
 import { StatisticOxiyopalModule } from './dashboard/statistic-oxiyopal.module';
+// import { EditCilidrosModule } from './cilindros/edit-cilindros/edit-cilidros.module';
+import { OxiCilindrosModule } from './cilindros/oxi-cilindros.module';
+import { OxiClientesModule } from './clientes/oxi-clientes.module';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     OxiyopalLayaudComponent,
-    ControlCilindroComponent,
-    AddCilindroComponent,
-    ListCilindrosComponent,
-    AddClienteComponent,
-    ListClienteComponent,
-    EditCilindrosComponent],
+    ],
   imports: [
+     OxiCilindrosModule,
+     OxiClientesModule,
     ThemeModule,
     NbMenuModule,
     CommonModule,

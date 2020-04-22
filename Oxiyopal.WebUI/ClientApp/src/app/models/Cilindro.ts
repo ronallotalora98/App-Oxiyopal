@@ -6,7 +6,7 @@ import { HistorialDeFactura } from './ViewModels/HistorialDeFactura';
 
 export class Cilindro extends EntityBase<number> {
     serial: string;
-    tamano: string;
+    cantidad: string;
 
     tipoDeProductoId: number;
     tipoDeProducto: TipoDeProducto;
