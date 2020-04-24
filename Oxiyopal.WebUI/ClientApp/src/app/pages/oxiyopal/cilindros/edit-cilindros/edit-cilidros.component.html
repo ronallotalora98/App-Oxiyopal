@@ -1,10 +1,54 @@
 <div class="row">
   <div class="col-md-8">
-    <nb-card style="height: 100%;">
-      <nb-card-header>Serial : {{cilindro.serial}}</nb-card-header>
+    <nb-card style="height: 100%;" *ngIf="result">
+      <nb-card-header>Serial : {{result.cilindro.serial}}</nb-card-header>
       <nb-card-body>
         <form action="" autocomplete="off">
           <div class="row">
+            <!-- tipo de producto oxigeno, actileno, mexcla, etc -->
+
+            <div class="form-group col-md-6" *ngIf="creteViewModel">
+              <label for="" class="label"
+                [ngClass]="{ 'is-invalid': click && !result.cilindro.tipoDeProductoId }">Tipo</label>
+              <nb-select fullWidth [(ngModel)]="result.cilindro.tipoDeProductoId" placeholder="Tipo" name="tipo">
+                <nb-option [value]="opt.id" *ngFor="let opt of creteViewModel.tipoDeProducto">
+                  {{opt.nombreTipoProducto}}</nb-option>
+              </nb-select>
+            </div>
+
+            <!-- Cantidad o tamaño del cilindro-->
+            <div class="form-group col-md-6" *ngIf="cantidades">
+              <label for="" class="label" [ngClass]="{ 'is-invalid': click && !result.cilindro.Cantidad}">Tamaño</label>
+              <nb-select fullWidth [(ngModel)]="result.cilindro.cantidad" placeholder="cantidad" name="cantidad">
+                <nb-option [value]="opt" *ngFor="let opt of cantidades">
+                  {{opt}}</nb-option>
+              </nb-select>
+            </div>
+
+            <!-- Estado del cilindro -->
+            <div class="form-group col-md-6" *ngIf="creteViewModel">
+              <label for="" class="label"
+                [ngClass]="{ 'is-invalid': click && !cilindro.estadoId }">Ubicacion</label>
+              <nb-select fullWidth  [(ngModel)]="result.cilindro.estadoId" placeholder="Estado" name="estado">
+                <nb-option [value]="opt.id" *ngFor="let opt of creteViewModel.estados">
+                  {{opt.nombreDeEstado}}</nb-option>
+              </nb-select>
+            </div>
+
+            <!-- Ubicacion -->
+            <div class="form-group col-md-6" *ngIf="creteViewModel">
+              <label for="" class="label"
+                [ngClass]="{ 'is-invalid': click && !cilindro.tamano }">Ubicacion</label>
+              <nb-select fullWidth [(ngModel)]="result.ubicacion.isBodega" placeholder="ubicacion" name="ubicacion ">
+                <nb-option [value]="true">
+                  Bodega</nb-option>
+                <nb-option [value]="false">
+                  Cliente</nb-option>
+              </nb-select>
+            </div>
+
+          </div>
+          <!-- <div class="row">
             <div class="form-group col-md-6">
               <label for="serial" class="label" [ngClass]="{ 'is-invalid': click && !cilindro.serial }">Tipo</label>
               <input type="text" nbInput fullWidth [(ngModel)]="cilindro.tipoDeProductoId" name="serial" id="serial"
@@ -31,7 +75,7 @@
                   Cliente</nb-option>
               </nb-select>
             </div>
-          </div>
+          </div> -->
         </form>
       </nb-card-body>
     </nb-card>

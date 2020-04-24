@@ -5,6 +5,8 @@ import { CreateCilinderViewModel } from '../models/CilindroViewModel/CreateCilin
 import { HttpClient } from '@angular/common/http';
 import { Cilindro } from '../models/Cilindro';
 import { CilindroSearhResultViewModel } from '../models/CilindroViewModel/CilindroSearhResultViewModel';
+import { CilindroEditViewModel } from '../models/CilindroViewModel/CilindroEditViewModel';
+import { LocationResult } from '../models/CilindroViewModel/LocationResul';
 
 @Injectable({
   providedIn: 'root',
@@ -29,9 +31,14 @@ export class CilindroService {
     return this.http.get<CilindroSearhResultViewModel>(callUrl);
   }
 
-  GetCilindro(cilindroId: number): Observable<any> {
+  GetCilindro(cilindroId: number): Observable<CilindroEditViewModel> {
     const callUrl = `${this.baseUrl}/Cilindro/obtenerCilindro/${cilindroId}`;
-    return this.http.get<any>(callUrl);
+    return this.http.get<CilindroEditViewModel>(callUrl);
+  }
+
+  GetLocations(isBodega: boolean): Observable<LocationResult> {
+    const callUrl = `${this.baseUrl}/Cilindro/obtenerUbicaciones/${isBodega}`;
+    return this.http.get<LocationResult>(callUrl);
   }
 
   UpdateNewCilinder(cilindro: Cilindro) {

@@ -43,6 +43,8 @@ namespace Oxiyopal.Services.ModelServices
             }
         ).ToList();
 
+        public CurrentUbicacion ubicacion;
+
         public CilindroSearchResult(Cilindro cilindro, IList<HistorialCilindro> historials)
         {
             this._cilindro = new Cilindro {
@@ -66,6 +68,42 @@ namespace Oxiyopal.Services.ModelServices
             };
 
             this._historial = historials;
+
+            foreach (var item in historials)
+            {
+                if (item.EsUbucacionActual == true)
+                {
+                    if (item.Ubicacion.estaEnBodega == true)
+                    {
+                        this.ubicacion = new CurrentUbicacion
+                        {
+                            IdClienBodeg = item.Ubicacion.Bodega.Id,
+                            NombreUbicacion = item.Ubicacion.Bodega.NombreBodega,
+                            IdUbicacion = item.Id,
+                            IsBodega = item.Ubicacion.estaEnBodega
+
+                        };
+                    }else
+                    {
+                        this.ubicacion = new CurrentUbicacion
+                        {
+                            IdClienBodeg = item.Ubicacion.Cliente.Id,
+                            NombreUbicacion = item.Ubicacion.Cliente.Nombre,
+                            IdUbicacion = item.Id,
+                            IsBodega = item.Ubicacion.estaEnBodega
+
+                        };
+                    }
+                }
+            }
         }
+    }
+
+    public class CurrentUbicacion
+    {
+        public int IdUbicacion { get; set; }
+        public string NombreUbicacion { get; set; }
+        public int IdClienBodeg { get; set; }
+        public bool IsBodega { get; set; }
     }
 }

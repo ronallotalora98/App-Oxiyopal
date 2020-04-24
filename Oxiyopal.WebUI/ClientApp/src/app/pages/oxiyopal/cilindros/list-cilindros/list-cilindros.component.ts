@@ -114,7 +114,7 @@ export class ListCilindrosComponent implements OnInit {
         /// Ver
         break;
       case 'editrecord':
-        this.router.navigate(['/oxi/edit-cilindro/' + this.typeCilinder, event.data.id]);
+        this.router.navigate(['/oxi/cilindros/edit-cilindro/' + this.typeCilinder, event.data.id]);
     }
   }
 

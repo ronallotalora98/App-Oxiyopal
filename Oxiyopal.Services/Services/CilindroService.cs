@@ -19,17 +19,23 @@ namespace Oxiyopal.Services.Services
         private readonly IRepository<Ubicacion, int> _ubicacionRepository;
         private readonly IRepository<TipoDeProducto, int> _tipoRepo;
         private readonly IRepository<Estado, int> _estadoRepo;
+        private readonly IRepository<Bodega, int> _bodegaRepo;
+        private readonly IRepository<Cliente, int> _clienteRepo;
         public CilindroService(IRepository<Cilindro, int> cilindroRepository,
                                IRepository<HistorialCilindro, int> hisCilindroRepository,
                                IRepository<Ubicacion, int> ubicacionRepository,
                                IRepository<TipoDeProducto, int> tipoRepo,
-                               IRepository<Estado, int> estadoRepo)
+                               IRepository<Estado, int> estadoRepo,
+                               IRepository<Bodega, int> bodegaRepo,
+                               IRepository<Cliente, int> clienteRepo)
         {
             this._cilindroRepository = cilindroRepository;
             this._hisCilindroRepository = hisCilindroRepository;
             this._ubicacionRepository = ubicacionRepository;
             this._tipoRepo = tipoRepo;
             this._estadoRepo = estadoRepo;
+            this._bodegaRepo = bodegaRepo;
+            this._clienteRepo = clienteRepo;
         }
         public async Task CreateCilinder(Cilindro cilindro)
         {
@@ -38,7 +44,8 @@ namespace Oxiyopal.Services.Services
                 this._cilindroRepository.Add(cilindro);
                 await this._cilindroRepository.SaveChangeAsync();
 
-                Ubicacion ubicacion = new Ubicacion {
+                Ubicacion ubicacion = new Ubicacion
+                {
                     estaEnBodega = true,
                     BodegaId = 1,
                     FechaDeTraslado = DateTime.Now
@@ -69,8 +76,8 @@ namespace Oxiyopal.Services.Services
             var cilindro = await this._cilindroRepository.Query()
                                      .Include(x => x.TipoDeProducto)
                                      .Include(x => x.Estado)
-                                    // .Include(x => x.HistorialCilindros).ThenInclude(x => x.Ubicacion).ThenInclude(x => x.Cliente)
-                                    // .Include(x => x.HistorialCilindros).ThenInclude(x => x.Ubicacion).ThenInclude(x => x.Cliente)
+                                     // .Include(x => x.HistorialCilindros).ThenInclude(x => x.Ubicacion).ThenInclude(x => x.Cliente)
+                                     // .Include(x => x.HistorialCilindros).ThenInclude(x => x.Ubicacion).ThenInclude(x => x.Cliente)
                                      .Where(x => x.Id == cilindroId)
                                      .FirstOrDefaultAsync();
             return cilindro;
@@ -87,13 +94,13 @@ namespace Oxiyopal.Services.Services
         public async Task<CilindroSearhResultViewModel> GetCilinderForType(string type)
         {
             var Cilindros = await this._hisCilindroRepository.Query()
-                                       .Include(x=>x.Ubicacion).ThenInclude(x=>x.Bodega)
-                                       .Include(x=>x.Ubicacion.Cliente)
-                                       .Include(x=>x.Cilindro).ThenInclude(x=>x.TipoDeProducto)
-                                       .Where(x=>x.EsUbucacionActual == true && x.Cilindro.TipoDeProducto.NombreTipoProducto.Contains(type))
+                                       .Include(x => x.Ubicacion).ThenInclude(x => x.Bodega)
+                                       .Include(x => x.Ubicacion.Cliente)
+                                       .Include(x => x.Cilindro).ThenInclude(x => x.TipoDeProducto)
+                                       .Where(x => x.EsUbucacionActual == true && x.Cilindro.TipoDeProducto.NombreTipoProducto.Contains(type))
                                        .ToListAsync();
-                                   
-            return  new CilindroSearhResultViewModel(Cilindros);
+
+            return new CilindroSearhResultViewModel(Cilindros);
         }
 
         public async Task<IList<Estado>> GetEstados()
@@ -106,6 +113,26 @@ namespace Oxiyopal.Services.Services
         {
             var type = await this._tipoRepo.Query().ToListAsync();
             return type;
+        }
+
+        public async Task<LocationsResult> getLocations(bool isBodega)
+        {
+            List<Bodega> bodegas = new List<Bodega>();
+            List<Cliente> clientes = new List<Cliente>();
+            if (isBodega == true)
+            {
+                /// clientes = new List<Cliente>();
+                bodegas = await this._bodegaRepo.Query().ToListAsync();
+
+            }
+            else
+            {
+                // bodegas = new List<Bodega>();
+                clientes = await this._clienteRepo.Query().ToListAsync();
+            }
+
+            return new LocationsResult(isBodega, bodegas, clientes);
+
         }
 
         public async Task UpdateClindro(Cilindro cilindro)

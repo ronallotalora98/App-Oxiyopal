@@ -92,6 +92,25 @@ namespace Oxiyopal.Controllers
             }
         }
 
+
+        [HttpGet]
+        [Route("obtenerUbicaciones/{isBodega}")]
+        [ProducesResponseType(typeof(LocationsResult), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetLocations(bool isBodega)
+        {
+            try
+            {
+                var result = await this._cilindroService.getLocations(isBodega);
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         [HttpPut]
         [Route("updateCilinder")]
         [ProducesResponseType(typeof(Cilindro), (int)HttpStatusCode.OK)]
